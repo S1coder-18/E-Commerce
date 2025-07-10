@@ -1,0 +1,28 @@
+.populer {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    height: 90vh;
+    background: linear-gradient(180deg, #e1ffea22, #47fdae  60%);
+
+}
+
+.populer h1{
+    color: #171717;
+    font-size: 50px;
+    font-weight: 600;
+
+}
+.populer hr {
+    width: 250px;
+    height: 3px;
+    background: #252525;
+    border-radius: 5px;
+}
+
+.populer-item {
+    margin-top: 50px;
+    display: flex;
+    gap: 50px;
+}
