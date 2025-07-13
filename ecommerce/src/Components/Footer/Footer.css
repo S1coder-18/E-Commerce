@@ -1,0 +1,89 @@
+.footer {
+  background-color: #f7f8fa;
+  color: #333;
+  padding: 3rem 2rem;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  border-top: 1px solid #e4e4e7;
+  box-shadow: 0 -1px 10px rgba(0, 0, 0, 0.04);
+  border-top-left-radius: 32px;
+  border-top-right-radius: 32px;
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-size: 1.7rem;
+  font-weight: 600;
+  margin-bottom: 1.2rem;
+  color: #6c63ff;
+}
+
+.footer-logo img {
+  height: 50px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  padding: 6px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.footer-links {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.8rem;
+  padding: 0;
+  margin: 1rem 0 2rem;
+}
+
+.footer-links li {
+  cursor: pointer;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+  color: #666;
+}
+
+.footer-links li:hover {
+  color: #ff6f61;
+}
+
+.footer-social-icon {
+  display: flex;
+  justify-content: center;
+  gap: 1.2rem;
+  margin-bottom: 1.2rem;
+}
+
+.footer-icons-container {
+  background-color: #fff;
+  padding: 12px;
+  border-radius: 50%;
+  border: 1px solid #e4e4e7;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.footer-icons-container:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 12px rgba(255, 111, 97, 0.2);
+}
+
+.footer-icons-container img {
+  height: 22px;
+  width: 22px;
+}
+
+.footer-copyright {
+  font-size: 0.85rem;
+  color: #999;
+  margin-top: 1rem;
+}
+
+.footer-copyright hr {
+  border: 0.5px solid #e4e4e7;
+  width: 60%;
+  margin: 0 auto 1rem;
+}
