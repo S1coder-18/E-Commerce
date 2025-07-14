@@ -1,3 +1,4 @@
+import CartItems from "../Components/Description/CartItems/CartItems";
 
 
 function Cart(){
@@ -5,7 +6,7 @@ function Cart(){
     return(
         <>
         <div>
-             <h1>Cart</h1>
+             <CartItems />
         </div>
         </>
     )

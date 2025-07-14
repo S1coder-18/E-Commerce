@@ -1,88 +1,102 @@
+/* 1. Main Navbar Container */
 .navbar {
-    display: flex;
-    justify-content: space-around;
-    padding: 16px;
-    box-shadow: 0 1px 3px -2px;
+  width: 100%;
+  height: 80px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 50px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
+/* 2. Logo Container */
 .nav-logo {
-    display: flex;
-    align-items: center;
-    gap: 12px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
-.nav-logo p{
-    color: #171717;
-    font-size: 30px;
-    font-weight: 600;
+.logo-text {
+  font-size: 24px;
+  font-weight: 700;
+  color: #1a1a1a;
 }
 
+/* 3. Menu Links */
 .nav-menu {
-    display: flex;
-    align-items: center;
-    list-style: none;
-    color: #626262;
-    gap: 50px;
-    font-size: 18px;
-    font-weight: 500;
-    z-index: 1000;
-    
+  display: flex;
+  gap: 40px;
+  list-style: none;
 }
 
 .nav-menu li {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    gap: 3px;
-    align-items: center;
-    cursor: pointer;
-
+  position: relative;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: color 0.3s ease;
 }
 
-.nav-menu hr {
-    border: none;
-    height: 3px;
-    width: 80%;
-    border-radius: 10px;
-    background-color: #ff4141;
-
+.nav-menu li:hover {
+  color: #ff3e6c;
 }
 
+.nav-menu li hr {
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  border: none;
+  background-color: #ff3e6c;
+}
+
+/* 4. Login & Cart Section */
 .nav-login-cart {
-    display: flex;
-    align-items: center;
-    gap: 45px;
+  display: flex;
+  align-items: center;
+  gap: 25px;
 }
 
 .nav-login-cart button {
-    width: 100px;
-    height: 30px;
-    outline: none;
-    gap: 50px;
-    border: 1px solid #7A7A7A;
-    cursor: pointer;
-    outline: none;
-    border-radius: 75px;
-    font-size: 18px;
-    font-weight: 500;
-    color: #515151;
-    background-color: white;
+  padding: 8px 20px;
+  background-color: #ff3e6c;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-.nav-login-cart button:active {
-    background: #f3f3f3;
+.nav-login-cart button:hover {
+  background-color: #e3345c;
 }
 
+/* 5. Cart Icon */
+.nav-login-cart img {
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.nav-login-cart img:hover {
+  transform: scale(1.1);
+}
+
+/* 6. Cart Count Badge */
 .nav-cart-count {
-    width: 22px;
-    height: 22px;
-    justify-content: center; /*0 went in center*/
-    align-items: center;     /*0 went in center*/
-    display: flex;
-    margin-top: -35px;
-    margin-left: -55px;
-    border-radius: 11px;
-    font-size: 14px;
-    background: red;
-    color: white;
-} 
+  position: absolute;
+  top: 18px;
+  right: 40px;
+  background-color: #ff3e6c;
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 2px 6px;
+  border-radius: 50%;
+}

@@ -3,7 +3,6 @@ import Offers from "../Components/Offers/Offers";
 import Populer from "../Components/Populer/Populer";
 import NewCollections from "../Components/NewCollections/NewCollections";
 import Newsletter from "../Components/NewsLetter/Newsletter";
-import LoginSignup from "./LoginSignup";
 function Shop(){
 
     return(
@@ -14,7 +13,7 @@ function Shop(){
           <Offers />
           <NewCollections />
           <Newsletter />
-          <LoginSignup />
+          
         </div>
         </>
 

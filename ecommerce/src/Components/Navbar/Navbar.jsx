@@ -2,9 +2,13 @@ import "./Navbar.css";
 import logo from "../../assets/logo.webp";
 import cart from "../../assets/Cart.webp";
 import { useState } from "react";
+import { useLocation } from "react-router-dom";
 import { Link } from "react-router-dom";
 function Navbar() {
   const [menu, setMenu] = useState("home");
+
+  const location = useLocation();
+  const path = location.pathname;
   return (
     <>
       <div className="navbar">
@@ -19,7 +23,7 @@ function Navbar() {
             }}
           >
             <Link to="/" style={{textDecoration: "none", color:"#626262"}}>Home</Link>
-            {menu === "home" ? <hr /> : <></>}
+            {menu === "home" && path !== "/login" && path !== '/cart' ? <hr /> : <></>}
           </li>
           <li
             onClick={() => {
@@ -27,7 +31,7 @@ function Navbar() {
             }}
           >
             <Link to="/mens" style={{textDecoration: "none", color:"#626262"}}>Mens</Link>
-            {menu === "mens" ? <hr /> : <></>}
+            {menu === "mens" && path !== "/login" && path !== '/cart' ? <hr /> : <></>}
           </li>
           <li
             onClick={() => {
@@ -35,7 +39,7 @@ function Navbar() {
             }}
           >
             <Link to="/womens" style={{textDecoration:"none", color:"#626262"}}>Womens</Link>
-            {menu === "womens" ? <hr /> : <></>}
+            {menu === "womens" && path !== "/login" && path !== "/cart" ? <hr /> : <></>}
           </li>
           <li
             onClick={() => {
@@ -44,7 +48,7 @@ function Navbar() {
           >
             <Link to="/kids" style={{textDecoration:"none", color:"#626262"}}>Kids</Link>
 
-            {menu === "kids" ? <hr /> : <></>}
+            {menu === "kids" && path !== "/login" && path !== "/cart" ? <hr /> : <></>}
           </li>
         </ul>
         <div className="nav-login-cart">
