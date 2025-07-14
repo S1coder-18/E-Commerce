@@ -5,11 +5,11 @@ function BredCrums(props){
     return(
         <>
         <div className='bredCrums'>
-            Home <img src={arrow_icon} alt='' height="10px" />
-            Shop <img src={arrow_icon} alt='' height="10px" />
-            {product.category}
+            <span>Home</span> <img src={arrow_icon} alt='' height="10px" />
+           <span> Shop </span><img src={arrow_icon} alt='' height="10px" />
+            <span>{product.category}</span>
             <img src={arrow_icon} alt='' height="10px" />
-            {product.name}
+            <span className='active'>{product.name}</span>
             <img src={arrow_icon} alt='' height="10px" />
             
         </div>
