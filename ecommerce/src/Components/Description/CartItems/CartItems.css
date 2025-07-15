@@ -1,75 +1,171 @@
 .cartItems {
-  width: 100%;
-  max-width: 1100px;
-  margin: 60px auto;
+  max-width: 1200px;
+  margin: 40px auto;
   padding: 20px;
-  background-color: #fff;
-  border-radius: 12px;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .cartitems-format-main {
   display: grid;
-  grid-template-columns: 1fr 2fr 1fr 1fr 1fr 1fr;
-  padding: 12px 20px;
+  grid-template-columns: 1.5fr 2fr 1fr 1fr 1fr 1fr;
+  padding: 16px 0;
   font-weight: bold;
-  color: #444;
-  font-size: 16px;
-  border-bottom: 1px solid #e2e2e2;
+  border-bottom: 2px solid #eee;
 }
 
 .cartItems-format {
   display: grid;
-  grid-template-columns: 1fr 2fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1.5fr 2fr 1fr 1fr 1fr 1fr;
   align-items: center;
-  padding: 20px;
-  border-bottom: 1px solid #f0f0f0;
-  transition: background-color 0.3s ease;
-}
-
-.cartItems-format:hover {
-  background-color: #f9f9f9;
+  padding: 20px 0;
+  font-size: 15px;
 }
 
 .carticon-product-icon {
   width: 70px;
-  height: 70px;
-  object-fit: contain;
-  border: 1px solid #ddd;
-  padding: 4px;
-  border-radius: 8px;
+  height: auto;
+  border-radius: 12px;
+  object-fit: cover;
+  transition: transform 0.2s ease;
+}
+
+.carticon-product-icon:hover {
+  transform: scale(1.05);
 }
 
 .cartitems-quantity {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 12px;
-  background-color: #f1f1f1;
+  background-color: #f5f5f5;
+  padding: 6px 12px;
+  margin: 5px 20px;
+  border: 1px solid #ccc;
   border-radius: 8px;
-  padding: 8px 12px;
-  font-weight: 500;
-  cursor: pointer;
-  transition: all 0.2s ease-in-out;
-  border: none;
+  font-size: 14px;
+  cursor: default;
 }
 
-.cartitems-quantity:hover {
-  background-color: #e4e4e4;
-}
-
-.cartitems-quantity img {
+.cartItems-format img[alt=""] {
   cursor: pointer;
   transition: transform 0.2s ease;
 }
 
-.cartitems-quantity img:hover {
-  transform: scale(1.1);
+.cartItems-format img[alt=""]:hover {
+  transform: scale(1.2);
 }
 
-.cartItems hr {
-  margin: 20px 0;
+.cartitems-down {
+  margin-top: 40px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.cartitems-total {
+  width: 360vh;
+  border: 1px solid black;
+  border-radius: 15px;
+  padding: 24px;
+  background-color: #fafafa;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.05);
+}
+.cartitems-total h1 {
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+
+.cartitems-total-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  font-size: 15px;
+}
+
+.cartitems-total-item:last-child {
+  font-weight: bold;
+}
+
+.cartitems-total button {
+  width: 100%;
+  padding:10px 0;
+  color: white;
+  background-color: #111;
+  font-size: 15px;
+  font-weight: 600;
   border: none;
-  border-top: 1px solid #ddd;
+  border-radius: 15px;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: background-color 0.3s;
+}
+
+.cartitems-total button:hover {
+  background-color: #444;
+}
+
+.cartitems-promocde {
+  margin-top: 30px;
+  font-size: 15px;
+  color: #444;
+  font-weight: bold;
+}
+
+.cartitems-promobox {
+  display: flex;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.cartitems-promobox input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 15px;
+    font-weight: bold;
+
+
+}
+
+.cartitems-promobox button {
+  padding: 10px 16px;
+  font-size: 16px;
+  font-weight: 500;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.cartitems-promobox button:hover {
+  background-color: #555;
+}
+
+.cartitems-total hr {
+  border: none;
+  border-top: 1px solid #eee;
+  margin: 16px 0;
+}
+
+
+.cart-summary-card {
+  display: flex;
+  justify-content: space-between;  
+  margin-top: 20px ;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 16px;
+}
+
+.thankyou-message {
+  font-size: 18px;
+  font-weight: 500;
+  color: #333;
+  background-color: #fff5e6;
+  border-left: 4px solid #ffa500;
+  padding: 12px 20px;
+  margin: 10px 70vh;
+  border-radius: 10px;
+  max-width: 70%;
 }
