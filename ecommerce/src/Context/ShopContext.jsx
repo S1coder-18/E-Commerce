@@ -1,6 +1,8 @@
 import { createContext, useState } from "react";
 import all_product from '../assets/all_product.js';
 export const ShopContext = createContext(null);
+import { useEffect } from "react";
+import { formToJSON } from "axios";
 
 const getDefaultCart=()=>{
     let cart = {};
@@ -12,19 +14,27 @@ const getDefaultCart=()=>{
 const ShoContextProvider = (props) =>{
     const [cartItems, setCartItmes] = useState(getDefaultCart());
 
+    const [user, setUser] = useState(()=>{
+        const savedUser = localStorage.getItem("user");
+        return savedUser ? JSON.parse(savedUser) : null;
+    });
+
+    
+
+    const signUp = (newUser) =>{
+        localStorage.setItem("user", JSON.stringify(newUser));
+    };
+
+    const logout = () =>{
+        setUser(null);
+        localStorage.removeItem("user");
+    };
+
+
     const addToCart = (itemId) =>{
         setCartItmes((prev) =>(
             {...prev, [itemId]: prev[itemId]+1}
         ))
-    }
-
-    const cartIncrement = (itemId) =>{
-        let count = 0;
-        let prev = -1;
-        if(itemId > prev){
-            count++;
-            prev = itemId;
-        }
     }
 
     const removeFromCart = (itemId) =>{
@@ -58,7 +68,7 @@ const ShoContextProvider = (props) =>{
         return totalItems;
     }
 
-    const contextValue = {all_product, cartItems, addToCart, removeFromCart, getTotalCartAmount, getTotalCartItems};
+    const contextValue = {all_product, cartItems, addToCart, removeFromCart, getTotalCartAmount, getTotalCartItems, user, signUp, logout};
 
 
     return(

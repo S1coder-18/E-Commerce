@@ -10,12 +10,15 @@ import Footer from "./Components/Footer/Footer";
 import men_banner from './assets/banner.jpg';
 import women_banner from './assets/women_banner.avif';
 import kids_banner from './assets/kids_banner.jpg';
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 function App() {
   return (
     <>
       <div>
         <BrowserRouter>
-          
+          <ToastContainer position="top-right" autoClose={3000}  />
           <Navbar />
           <Routes>
             <Route path="/" element={<Shop />}/>
