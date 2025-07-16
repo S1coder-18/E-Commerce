@@ -12,9 +12,8 @@ function LoginSignup() {
     password: "",
   });
 
-
   const validate = () => {
-    if(formData.name.trim() === "") {
+    if (formData.name.trim() === "") {
       toast.error("Name must be entered!.");
       return false;
     }
@@ -24,12 +23,23 @@ function LoginSignup() {
       return false;
     }
 
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(formData.email)) {
+      toast.error("Invalid email format!");
+      return false;
+    }
+
     if (formData.password.trim().length === 0) {
       toast.error("Password must be entered!.");
       return false;
     }
     if (formData.password.trim().length < 6) {
       toast.error("Password should contain atleast 6 characters!.");
+      return false;
+    }
+    const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{6,}$/;
+    if (!passwordRegex.test(formData.password)) {
+      toast.error("password must be strong");
       return false;
     }
 
